@@ -1,4 +1,9 @@
-# basic-express-server
+# Basic-Express-Server
+
+## Author: Kao Saelor
+
+## Collaborators
+Collaborated with Kenya W., Hayden C. and Corianna W.
 
 ## Phase 1 Requirements
 
