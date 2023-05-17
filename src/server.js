@@ -12,6 +12,15 @@ const app = express();
 app.use(logger);
 
 // Routes
+
+app.get('/', (req, res, next) => {
+  res.status(200).send('proof of life');
+});
+
+app.get('/test', (request, response) => {
+  response.send('test request received');
+});
+
 app.get('/person', validator, (req, res) => {
   const name = req.query.name;
   if (name) {
@@ -20,18 +29,16 @@ app.get('/person', validator, (req, res) => {
     throw new Error('Name is missing');
   }
 });
-app.get('/test', (request, response) => {
-  response.send('test request received');
-});
+
 
 // Error Handlers
 app.use(errorHandler404);
 app.use(errorHandler500);
 
 module.exports = {
-  start: function (port) {
-    app.listen(port, () => {
-      console.log(`Server is listening on port ${port}`);
+  start: function (PORT) {
+    app.listen(PORT, () => {
+      console.log(`Server is listening on port ${PORT}`);
     });
   },
   app: app,
