@@ -10,9 +10,9 @@ From a business requirements standpoint, we will be building a basic Express ser
 
 - Path: /person
 
-    - - Expects a query string from the user with a “name” property
-    - - When present, output JSON to the client with this shape: { name: "name provided" }
-    - - Without a name in the query string, force a “500” error
+  - Expects a query string from the user with a “name” property
+  - When present, output JSON to the client with this shape: { name: "name provided" }
+  - Without a name in the query string, force a “500” error
 
 ### Implementation Notes
 
@@ -70,7 +70,6 @@ Create an express server with the following proposed structure
     - Sends a 500/Server Error message as the response
     - Import this into your server and set it up to be “used” as the last route
 
-
 - Create the /person route within your `server.js`
   - This route should use the validator middleware to check the user’s input
   - If valid, send a JSON object through the response with the name value in it
@@ -91,7 +90,8 @@ i.e. {"name": "fred" }
 
 Your server must be deployed to the cloud. Please note the deployed URL in your README!
 
-Render URL: https://basic-express-server-vn0s.onrender.com/
+Render URL: <https://basic-express-server-vn0s.onrender.com/>
 
 ### UML
+
 ![UML IMage](./assets/uml-img.jpg)
