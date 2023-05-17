@@ -20,6 +20,9 @@ app.get('/person', validator, (req, res) => {
     throw new Error('Name is missing');
   }
 });
+app.get('/test', (request, response) => {
+  response.send('test request received');
+});
 
 // Error Handlers
 app.use(errorHandler404);
